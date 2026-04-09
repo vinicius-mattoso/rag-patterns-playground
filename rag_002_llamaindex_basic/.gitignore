@@ -1,0 +1,13 @@
+# .gitignore
+# Ignore files for the RAG pipeline
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+
+# Index files
+data/index.json

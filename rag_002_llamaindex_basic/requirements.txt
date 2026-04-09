@@ -1,0 +1,5 @@
+# requirements.txt
+# Dependencies for the RAG pipeline
+
+llama-index
+dotenv
