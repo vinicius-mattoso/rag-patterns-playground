@@ -1,0 +1,222 @@
+{
+  "graph": {
+    "directed": true,
+    "multigraph": true,
+    "graph": {},
+    "nodes": [
+      {
+        "entity_type": "Shipment",
+        "description": "A shipment that was loaded, inspected, and delivered.",
+        "id": "Shipment SHP-004"
+      },
+      {
+        "entity_type": "Event",
+        "description": "Event recording that shipment SHP-004 was loaded in Curitiba.",
+        "id": "Event EVT-005"
+      },
+      {
+        "entity_type": "Event",
+        "description": "Event recording that shipment SHP-004 suffered a refrigerated inspection delay.",
+        "id": "Event EVT-006"
+      },
+      {
+        "entity_type": "Event",
+        "description": "Event confirming that shipment SHP-004 was delivered in Salvador.",
+        "id": "Event EVT-007"
+      },
+      {
+        "entity_type": "Person",
+        "description": "Operations manager who commented on the delay.",
+        "id": "Person Marina Costa"
+      },
+      {
+        "entity_type": "Carrier",
+        "description": "Handles Shipment SHP-004.",
+        "id": "Carrier Cargo Pulse"
+      },
+      {
+        "entity_type": "Route",
+        "description": "Route taken by Shipment SHP-004 from Sao Paulo to Curitiba.",
+        "id": "Route RTE-002"
+      },
+      {
+        "entity_type": "Warehouse",
+        "description": "Departure point for Shipment SHP-004.",
+        "id": "Warehouse Curitiba Cold Storage"
+      },
+      {
+        "entity_type": "Warehouse",
+        "description": "Arrival point for Shipment SHP-004.",
+        "id": "Warehouse Salvador Regional Hub"
+      },
+      {
+        "entity_type": "Shipment",
+        "description": "Handled by Carrier Blue Route Logistics, uses Route RTE-007 from Santos to Vitoria, delayed due to mechanical issue.",
+        "id": "Shipment SHP-008"
+      },
+      {
+        "entity_type": "Carrier",
+        "description": "Handles Shipment SHP-008.",
+        "id": "Carrier Blue Route Logistics"
+      },
+      {
+        "entity_type": "Route",
+        "description": "Route taken by Shipment SHP-008 from Santos to Vitoria.",
+        "id": "Route RTE-007"
+      },
+      {
+        "entity_type": "Shipment",
+        "description": "Supervised by Carrier Atlas Freight on Route RTE-003 from Rio de Janeiro to Brasilia.",
+        "id": "Shipment SHP-003"
+      },
+      {
+        "entity_type": "Carrier",
+        "description": "Supervises Shipment SHP-003.",
+        "id": "Carrier Atlas Freight"
+      },
+      {
+        "entity_type": "Route",
+        "description": "Route taken by Shipment SHP-003 from Rio de Janeiro to Brasilia.",
+        "id": "Route RTE-003"
+      },
+      {
+        "entity_type": "Person",
+        "description": "senior coordinator assigned to monitor the shipment",
+        "id": "Person Luiza Mello"
+      }
+    ],
+    "links": [
+      {
+        "relation": "is handled by",
+        "evidence": "Shipment SHP-004 is handled by Carrier Cargo Pulse.",
+        "chunk_id": "operations_briefing_chunk_0",
+        "source_id": "operations_briefing",
+        "source": "Shipment SHP-004",
+        "target": "Carrier Cargo Pulse",
+        "key": 0
+      },
+      {
+        "relation": "travels on",
+        "evidence": "Shipment SHP-004 travels on Route RTE-002.",
+        "chunk_id": "operations_briefing_chunk_0",
+        "source_id": "operations_briefing",
+        "source": "Shipment SHP-004",
+        "target": "Route RTE-002",
+        "key": 0
+      },
+      {
+        "relation": "departs from",
+        "evidence": "Shipment SHP-004 departs from Warehouse Curitiba Cold Storage.",
+        "chunk_id": "operations_briefing_chunk_0",
+        "source_id": "operations_briefing",
+        "source": "Shipment SHP-004",
+        "target": "Warehouse Curitiba Cold Storage",
+        "key": 0
+      },
+      {
+        "relation": "arrives at",
+        "evidence": "Shipment SHP-004 arrives at Warehouse Salvador Regional Hub.",
+        "chunk_id": "operations_briefing_chunk_0",
+        "source_id": "operations_briefing",
+        "source": "Shipment SHP-004",
+        "target": "Warehouse Salvador Regional Hub",
+        "key": 0
+      },
+      {
+        "relation": "records that",
+        "evidence": "Event EVT-005 records that shipment SHP-004 was loaded in Curitiba.",
+        "chunk_id": "delivery_notes_chunk_0",
+        "source_id": "delivery_notes",
+        "source": "Event EVT-005",
+        "target": "Shipment SHP-004",
+        "key": 0
+      },
+      {
+        "relation": "states that",
+        "evidence": "Event EVT-006 states that shipment SHP-004 suffered a refrigerated inspection delay.",
+        "chunk_id": "delivery_notes_chunk_0",
+        "source_id": "delivery_notes",
+        "source": "Event EVT-006",
+        "target": "Shipment SHP-004",
+        "key": 0
+      },
+      {
+        "relation": "said that",
+        "evidence": "Operations manager Marina Costa said that the delay was caused by temperature inspection procedures.",
+        "chunk_id": "delivery_notes_chunk_0",
+        "source_id": "delivery_notes",
+        "source": "Event EVT-006",
+        "target": "Person Marina Costa",
+        "key": 0
+      },
+      {
+        "relation": "confirms that",
+        "evidence": "Event EVT-007 confirms that shipment SHP-004 was delivered in Salvador.",
+        "chunk_id": "delivery_notes_chunk_0",
+        "source_id": "delivery_notes",
+        "source": "Event EVT-007",
+        "target": "Shipment SHP-004",
+        "key": 0
+      },
+      {
+        "relation": "assigned",
+        "evidence": "Cargo Pulse assigned senior coordinator Luiza Mello",
+        "chunk_id": "inline_1_chunk_0",
+        "source_id": "inline_1",
+        "source": "Carrier Cargo Pulse",
+        "target": "Person Luiza Mello",
+        "key": 0
+      },
+      {
+        "relation": "monitored",
+        "evidence": "to monitor shipment SHP-004",
+        "chunk_id": "inline_1_chunk_0",
+        "source_id": "inline_1",
+        "source": "Carrier Cargo Pulse",
+        "target": "Shipment SHP-004",
+        "key": 0
+      },
+      {
+        "relation": "is handled by",
+        "evidence": "Shipment SHP-008 is handled by Carrier Blue Route Logistics.",
+        "chunk_id": "operations_briefing_chunk_0",
+        "source_id": "operations_briefing",
+        "source": "Shipment SHP-008",
+        "target": "Carrier Blue Route Logistics",
+        "key": 0
+      },
+      {
+        "relation": "uses",
+        "evidence": "Shipment SHP-008 uses Route RTE-007.",
+        "chunk_id": "operations_briefing_chunk_0",
+        "source_id": "operations_briefing",
+        "source": "Shipment SHP-008",
+        "target": "Route RTE-007",
+        "key": 0
+      },
+      {
+        "relation": "is supervised by",
+        "evidence": "Carrier Atlas Freight supervises shipment SHP-003.",
+        "chunk_id": "operations_briefing_chunk_0",
+        "source_id": "operations_briefing",
+        "source": "Shipment SHP-003",
+        "target": "Carrier Atlas Freight",
+        "key": 0
+      },
+      {
+        "relation": "travels on",
+        "evidence": "on Route RTE-003 from Rio de Janeiro to Brasilia.",
+        "chunk_id": "operations_briefing_chunk_0",
+        "source_id": "operations_briefing",
+        "source": "Shipment SHP-003",
+        "target": "Route RTE-003",
+        "key": 0
+      }
+    ]
+  },
+  "source_index": {
+    "delivery_notes": "Event EVT-005 records that shipment SHP-004 was loaded in Curitiba on 2026-04-05T09:30:00.\nEvent EVT-006 states that shipment SHP-004 suffered a refrigerated inspection delay at Joinville on 2026-04-06T21:10:00.\nEvent EVT-007 confirms that shipment SHP-004 was delivered in Salvador on 2026-04-07T11:40:00.\n\nOperations manager Marina Costa said that the delay was caused by temperature inspection procedures.\n",
+    "operations_briefing": "# Helios Logistics Briefing\n\nShipment SHP-004 is handled by Carrier Cargo Pulse. Shipment SHP-004 travels on Route RTE-002 from Sao Paulo to Curitiba. Shipment SHP-004 departs from Warehouse Curitiba Cold Storage and arrives at Warehouse Salvador Regional Hub.\n\nShipment SHP-008 is handled by Carrier Blue Route Logistics. Shipment SHP-008 uses Route RTE-007 from Santos to Vitoria and is delayed after a mechanical issue.\n\nCarrier Atlas Freight supervises shipment SHP-003 on Route RTE-003 from Rio de Janeiro to Brasilia.\n",
+    "inline_1": "Operational note: Cargo Pulse assigned senior coordinator Luiza Mello to monitor\nshipment SHP-004 after the refrigerated inspection delay at Joinville."
+  }
+}
