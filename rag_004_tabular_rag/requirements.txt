@@ -1,0 +1,8 @@
+python-dotenv>=1.0.1
+pandas>=2.2.0
+PyYAML>=6.0.0
+networkx>=3.4.0
+pyvis>=0.3.2
+langchain-community>=0.3.0
+langchain-openai>=0.2.0
+langchain-ollama>=0.2.0

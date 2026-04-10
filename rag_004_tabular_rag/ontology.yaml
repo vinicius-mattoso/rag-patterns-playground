@@ -1,0 +1,78 @@
+entities:
+  - table: shipments
+    entity_type: Shipment
+    id_column: shipment_id
+    label_template: "Shipment {shipment_id}"
+    description_template: "Shipment {shipment_id} is {status} with priority {priority}."
+    attribute_columns: [status, priority, weight_kg]
+    color: "#2563eb"
+  - table: routes
+    entity_type: Route
+    id_column: route_id
+    label_template: "Route {route_id} {route_name}"
+    description_template: "Route from {origin_city} to {destination_city} over {distance_km} km."
+    attribute_columns: [origin_city, destination_city, distance_km, planned_hours]
+    color: "#0f766e"
+  - table: carriers
+    entity_type: Carrier
+    id_column: carrier_id
+    label_template: "Carrier {carrier_name}"
+    description_template: "Carrier {carrier_name} has service level {service_level} and on-time rate {on_time_rate}."
+    attribute_columns: [service_level, on_time_rate, fleet_size]
+    color: "#7c3aed"
+  - table: warehouses
+    entity_type: Warehouse
+    id_column: warehouse_id
+    label_template: "Warehouse {warehouse_name}"
+    description_template: "Warehouse {warehouse_name} is in {city}, region {region}, capacity {capacity_units}."
+    attribute_columns: [city, region, capacity_units]
+    color: "#b45309"
+  - table: delivery_events
+    entity_type: DeliveryEvent
+    id_column: event_id
+    label_template: "Event {event_id} {event_type}"
+    description_template: "Delivery event {event_type} occurred at {location} on {event_timestamp}."
+    attribute_columns: [shipment_id, event_timestamp, event_type, location]
+    color: "#dc2626"
+
+relationships:
+  - name: shipment_uses_route
+    source_table: shipments
+    source_entity: Shipment
+    source_key_column: shipment_id
+    target_table: routes
+    target_entity: Route
+    target_key_column: route_id
+    relation_template: "uses route {route_id} and is currently {status}"
+  - name: shipment_handled_by_carrier
+    source_table: shipments
+    source_entity: Shipment
+    source_key_column: shipment_id
+    target_table: carriers
+    target_entity: Carrier
+    target_key_column: carrier_id
+    relation_template: "is handled by carrier {carrier_id} with priority {priority}"
+  - name: shipment_origin_warehouse
+    source_table: shipments
+    source_entity: Shipment
+    source_key_column: shipment_id
+    target_table: warehouses
+    target_entity: Warehouse
+    target_key_column: origin_warehouse_id
+    relation_template: "departs from warehouse {origin_warehouse_id}"
+  - name: shipment_destination_warehouse
+    source_table: shipments
+    source_entity: Shipment
+    source_key_column: shipment_id
+    target_table: warehouses
+    target_entity: Warehouse
+    target_key_column: destination_warehouse_id
+    relation_template: "arrives at warehouse {destination_warehouse_id}"
+  - name: event_belongs_to_shipment
+    source_table: delivery_events
+    source_entity: DeliveryEvent
+    source_key_column: event_id
+    target_table: shipments
+    target_entity: Shipment
+    target_key_column: shipment_id
+    relation_template: "belongs to shipment {shipment_id} and happened at {event_timestamp}"

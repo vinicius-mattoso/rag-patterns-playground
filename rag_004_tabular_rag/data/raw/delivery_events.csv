@@ -1,0 +1,11 @@
+event_id,shipment_id,event_timestamp,event_type,location,status_note
+EVT-001,SHP-001,2026-04-02T08:15:00,loaded,Rio de Janeiro,Loaded at origin hub
+EVT-002,SHP-001,2026-04-03T14:20:00,delivered,Sao Paulo,Delivered on time
+EVT-003,SHP-002,2026-04-04T07:10:00,departed,Sao Paulo,Departed warehouse
+EVT-004,SHP-002,2026-04-05T18:45:00,exception,Registro,Road congestion delayed linehaul
+EVT-005,SHP-004,2026-04-05T09:30:00,loaded,Curitiba,Loaded with refrigerated handling
+EVT-006,SHP-004,2026-04-06T21:10:00,exception,Joinville,Temperature inspection caused delay
+EVT-007,SHP-004,2026-04-07T11:40:00,delivered,Salvador,Delivered one day late
+EVT-008,SHP-006,2026-04-08T06:55:00,scheduled,Recife,Awaiting dock assignment
+EVT-009,SHP-007,2026-04-09T05:40:00,loaded,Campinas,Loaded for overnight departure
+EVT-010,SHP-008,2026-04-10T13:25:00,exception,Campos dos Goytacazes,Mechanical issue delayed route

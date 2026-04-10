@@ -1,0 +1,11 @@
+warehouse_id,warehouse_name,city,region,capacity_units,manager
+WH-001,Central Rio Hub,Rio de Janeiro,Southeast,18000,Ana Martins
+WH-002,Santos Crossdock,Santos,Southeast,9500,Bruno Lima
+WH-003,Curitiba Cold Storage,Curitiba,South,12000,Carla Souza
+WH-004,Brasilia Transit Point,Brasilia,Center-West,7600,Diego Ramos
+WH-005,Salvador Regional Hub,Salvador,Northeast,15400,Elisa Rocha
+WH-006,Campinas Linehaul Center,Campinas,Southeast,13200,Felipe Moura
+WH-007,Goiania Distribution Park,Goiania,Center-West,10100,Gabriela Nunes
+WH-008,Vitoria Port Hub,Vitoria,Southeast,8900,Helena Prado
+WH-009,Fortaleza Coastal DC,Fortaleza,Northeast,14700,Igor Batista
+WH-010,Manaus Air Cargo Base,Manaus,North,11300,Juliana Costa
