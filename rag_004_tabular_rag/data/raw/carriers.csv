@@ -1,0 +1,11 @@
+carrier_id,carrier_name,service_level,on_time_rate,fleet_size
+CAR-001,Atlas Freight,premium,0.97,54
+CAR-002,Blue Route Logistics,standard,0.91,71
+CAR-003,Cargo Pulse,express,0.88,39
+CAR-004,Delta Haul,economy,0.93,62
+CAR-005,Echo Transport,premium,0.95,48
+CAR-006,Falcon Cold Chain,express,0.89,36
+CAR-007,Golden Mile Cargo,standard,0.92,58
+CAR-008,Horizon Air Freight,premium,0.98,27
+CAR-009,Iron Road Movers,economy,0.87,83
+CAR-010,JetRoute Services,express,0.94,33

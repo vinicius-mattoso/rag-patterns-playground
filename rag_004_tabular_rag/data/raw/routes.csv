@@ -1,0 +1,11 @@
+route_id,route_name,origin_city,destination_city,distance_km,mode,refrigerated,planned_hours
+RTE-001,Rio-SaoPaulo,Rio de Janeiro,Sao Paulo,430,road,false,7.5
+RTE-002,SaoPaulo-Curitiba,Sao Paulo,Curitiba,408,road,true,8.0
+RTE-003,Rio-Brasilia,Rio de Janeiro,Brasilia,1148,road,false,17.0
+RTE-004,Curitiba-PortoAlegre,Curitiba,Porto Alegre,711,road,true,12.5
+RTE-005,Recife-Salvador,Recife,Salvador,800,road,false,13.0
+RTE-006,Campinas-Goiania,Campinas,Goiania,934,road,false,14.0
+RTE-007,Santos-Vitoria,Santos,Vitoria,835,road,false,12.0
+RTE-008,Fortaleza-Rio,Fortaleza,Rio de Janeiro,2190,road,false,31.0
+RTE-009,Manaus-Brasilia,Manaus,Brasilia,3490,air,false,5.5
+RTE-010,Salvador-BeloHorizonte,Salvador,Belo Horizonte,1370,road,true,21.0
