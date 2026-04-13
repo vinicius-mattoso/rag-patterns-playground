@@ -1,0 +1,5 @@
+Delivery event EVT-005 records that shipment SHP-004 was loaded in Curitiba on 2026-04-05 at 09:30. Delivery event EVT-006 records that shipment SHP-004 was delayed by a refrigerated inspection on 2026-04-06 at 21:10. Delivery event EVT-007 confirms that shipment SHP-004 was delivered in Salvador on 2026-04-08 at 14:20.
+
+Delivery event EVT-011 confirms that shipment SHP-007 departed from Manaus River Port and should be received by Warehouse Fortaleza Regional Hub. Atlas Freight requested exception monitoring because rainstorms were expected along route RTE-005.
+
+Blue Route Logistics reported that shipment SHP-009 remained on schedule on route RTE-003, with no adverse delivery events.

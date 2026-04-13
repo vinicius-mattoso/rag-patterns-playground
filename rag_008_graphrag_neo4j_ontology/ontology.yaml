@@ -1,0 +1,63 @@
+entity_types:
+  - name: Shipment
+    aliases: [shipment, shipments, cargo shipment]
+    id_patterns: ["^SHP-\\d+$"]
+    required_properties: [id]
+    description: A logistics shipment tracked across carriers, routes, and warehouses.
+  - name: Carrier
+    aliases: [carrier, logistics provider, transport company]
+    id_patterns: []
+    required_properties: [id]
+    description: The carrier responsible for operating shipments.
+  - name: Route
+    aliases: [route, corridor, transit route]
+    id_patterns: ["^RTE-\\d+$"]
+    required_properties: [id]
+    description: A route or corridor used by a shipment.
+  - name: Warehouse
+    aliases: [warehouse, terminal, hub, storage facility]
+    id_patterns: ["^WH-\\d+$"]
+    required_properties: [id]
+    description: A warehouse, hub, or terminal involved in the shipment lifecycle.
+  - name: DeliveryEvent
+    aliases: [delivery event, event, operational event]
+    id_patterns: ["^EVT-\\d+$"]
+    required_properties: [id]
+    description: A structured operational event attached to a shipment.
+
+relationship_types:
+  - name: HANDLED_BY
+    aliases: [handled by, operated by, responsible for]
+    source_types: [Shipment]
+    target_types: [Carrier]
+    description: A shipment is handled by a carrier.
+  - name: TRAVELS_ON
+    aliases: [travels on, follows route, uses route]
+    source_types: [Shipment]
+    target_types: [Route]
+    description: A shipment travels on a route.
+  - name: DEPARTS_FROM
+    aliases: [departs from, leaves, originates at]
+    source_types: [Shipment]
+    target_types: [Warehouse]
+    description: A shipment departs from a warehouse.
+  - name: ARRIVES_AT
+    aliases: [arrives at, goes to, should receive]
+    source_types: [Shipment]
+    target_types: [Warehouse]
+    description: A shipment arrives at a warehouse.
+  - name: BELONGS_TO
+    aliases: [belongs to, attached to, recorded for]
+    source_types: [DeliveryEvent]
+    target_types: [Shipment]
+    description: A delivery event belongs to a shipment.
+  - name: DELAYED_BY
+    aliases: [delayed by, blocked by, impacted by]
+    source_types: [Shipment]
+    target_types: [DeliveryEvent]
+    description: A shipment was delayed by an event.
+  - name: MONITORED_BY
+    aliases: [monitored by, watched by, tracked by]
+    source_types: [Shipment]
+    target_types: [Carrier]
+    description: A shipment is monitored by a carrier or carrier-assigned team.
